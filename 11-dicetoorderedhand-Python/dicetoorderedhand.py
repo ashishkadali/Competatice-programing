@@ -12,4 +12,10 @@
 
 def dicetoorderedhand(a, b, c):
 	# your code goes here
-	pass
+	s=sorted((a,b,c),reverse=True)
+	return 100*s[0]+10*s[1]+s[2]
+	
+	
+
+
+
