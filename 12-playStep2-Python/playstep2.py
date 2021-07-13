@@ -35,4 +35,53 @@
 
 def playstep2(hand, dice):
 	# your code goes here
-	pass
+	a=str(hand)
+	l=[]
+	for i in a:
+		l.append(int(i))
+	a=l[0]
+	b=l[1]
+	c=l[2]
+
+	if (a!=b and b!=c and c!=a):
+		e=str(max(l))
+		f=str(dice%10)
+		dice=dice//10
+		g=str(dice%10)
+		dice=dice//10
+		e=e+f+g
+		e=sorted(e)
+		e="".join(e)
+		e=e[::-1]
+		e=int(e)
+		return(e,dice)
+
+	else:
+		i=dice%10
+		dice=dice//10
+		print(dice)
+
+		e=""
+		if (a==b):
+			c=i
+		elif (b==c):
+			a=i
+		else:
+			b=i
+		e=str(a)+str(b)+str(c)
+		# print(e)
+		# print(dice)
+		e=sorted(e)
+		e="".join(e)
+		e=e[::-1]
+		e=int(e)
+		# print(e)
+		return(e,dice)
+
+
+
+print(playstep2(544,23))
+
+		
+
+		
