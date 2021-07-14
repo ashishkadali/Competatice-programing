@@ -6,13 +6,14 @@ Make sure you pass the test cases too!"""
 
 class Queue:
     def __init__(self, head=None):
-        self.storage = [head]
+        self.list = [head]
+
 
     def enqueue(self, new_element):
-        pass
-
-    def peek(self):
-        pass 
+        return self.list.append(new_element)
 
     def dequeue(self):
-        pass
+        return self.list.pop(0)
+
+    def peek(self):
+        return (self.list[0])
