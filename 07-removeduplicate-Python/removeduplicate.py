@@ -5,4 +5,8 @@
 
 def removeduplicate(text):
 	# Your code goes here
-	pass
+	a=set(text)
+	b=""
+	for i in a:
+		b=b+i
+	return b
