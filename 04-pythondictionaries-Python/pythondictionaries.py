@@ -1,13 +1,8 @@
-"""Time to play with Python dictionaries!
-You're going to work on a dictionary that
-stores cities by country and continent.
-One is done for you - the city of Mountain 
-View is in the USA, which is in North America.
+"""Time to play with Python dictionaries! You're going to work on a dictionary that stores cities by country and
+ continent. One is done for you - the city of Mountain  View is in the USA, which is in North America.
 
-You need to add the cities listed below by
-modifying the structure.
-Then, you should print out the values specified
-by looking them up in the structure.
+You need to add the cities listed below by modifying the structure.
+Then, you should print out the values specified by looking them up in the structure.
 
 Cities to add:
 Bangalore (India, Asia)
@@ -30,14 +25,24 @@ American City
 Asian City - Country
 Asian City - Country"""
 
-
 def sortUSA():
     '''Return all the cities in the USA in alphabetical order'''
-    pass
+    return sorted(locations['North America']['USA'])
 
 def alphaAsia():
     '''Return all the cities in Asia continent in alphabetical order'''
-    pass
+    cities = list()
+    for i in locations['Asia']:
+        for j in locations['Asia'][i]:
+            cities.append([j+" -"+i])
+    return sorted(cities)
 
 # Note: Check for test cases to understand the output format.
 locations = {'North America': {'USA': ['Mountain View']}}
+locations['Asia'] = {'India' : ['Bangalore']}
+locations['North America']['USA'].append('Atlanta')
+locations['Atlanta'] = {'Atlanta' : ['Cairo']}
+locations['Asia']['China'] = ['Shanghai']
+
+print(sortUSA())
+print(alphaAsia())
