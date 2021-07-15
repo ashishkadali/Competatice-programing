@@ -8,7 +8,7 @@ def trianglearea(s1, s2, s3):
 	# your code goes here
 	s=(s1+s2+s3)/2
 
-	a=math.sqrt(s*((s-s1)*(s-s2)(s-s3)))
+	a=math.sqrt(s*((s-s1)*(s-s2)*(s-s3)))
 	return a
 
 
