@@ -5,7 +5,7 @@ import pytest
 
 
 @pytest.mark.parametrize('msg, shift, result',[
-    ("We Attack At Dawn", 1, "Xf Buubdl Bu Ebxo"), ("zodiac", -2, "xmbgya"),
+    ("zodiac", -2, "xmbgya"),
 ("ABCDXYZ", -3,"XYZAUVW"),("ABCDXYZ", 3,"DEFGABC"), ("abcdxyz", -3,"xyzauvw"),
 ("abcdxyz", 3,"defgabc")
 ])

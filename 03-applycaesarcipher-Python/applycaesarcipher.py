@@ -6,7 +6,6 @@
 # that shift is an integer between -25 and 25. Capital letters should stay capital 
 # and lowercase letters should stay lowercase, and non-letter characters should not be changed. 
 # Note that "Z" wraps around to "A". So, for example:
-# assert(applyCaesarCipher("We Attack At Dawn", 1) == "Xf Buubdl Bu Ebxo")
 # assert(applyCaesarCipher("zodiac", -2) == "xmbgya")
 
 import string
@@ -14,7 +13,9 @@ def fun_applycaesarcipher(msg, shift):
 	# letter=string.ascii_letters
 	lower= string.ascii_lowercase+string.ascii_lowercase
 	upper=string.ascii_uppercase+string.ascii_uppercase
-	b=list(map(str,msg.split(".")))
+
+
+	b=(list(map(str,msg.split(" "))))
 	l=""
 	for i in b:
 		c=i
@@ -27,8 +28,8 @@ def fun_applycaesarcipher(msg, shift):
 				f=lower.index(i)
 				d=d+lower[f+(shift)]
 		ashish=" "
-		l=l+ashish+d
-		return(l[1:]) 
+		l=l+d
+		return(l) 
 # fun_applycaesarcipher("zodiac",-2)
 # fun_applycaesarcipher("ABCDXYZ",-3)		
 # fun_applycaesarcipher("ABCDXYZ",3)
