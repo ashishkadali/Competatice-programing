@@ -15,21 +15,23 @@ def fun_applycaesarcipher(msg, shift):
 	upper=string.ascii_uppercase+string.ascii_uppercase
 
 
-	b=(list(map(str,msg.split(" "))))
+	# b=(list(map(str,msg.split(" "))))
 	l=""
-	for i in b:
-		c=i
+	for i in msg:
+		
 		d=""
-		for i in c:
-			if i in upper:
-				f=upper.index(i)
-				d=d+upper[f+(shift)]
-			elif i in lower:
-				f=lower.index(i)
-				d=d+lower[f+(shift)]
-		ashish=" "
+	
+		if i in upper:
+			f=upper.index(i)
+			d=d+upper[f+(shift)]
+		elif i in lower:
+			f=lower.index(i)
+			d=d+lower[f+(shift)]
+		else:
+			d=d+i
+		# ashish=" "
 		l=l+d
-		return(l) 
+	return(l) 
 # fun_applycaesarcipher("zodiac",-2)
 # fun_applycaesarcipher("ABCDXYZ",-3)		
 # fun_applycaesarcipher("ABCDXYZ",3)
