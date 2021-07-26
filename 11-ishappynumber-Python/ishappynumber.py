@@ -18,5 +18,32 @@
 # assert(ishappynumber(405) == False)
 
 def ishappynumber(n):
-	# your code goes here
-	pass
+	l=[]
+	l.append(n)
+	if n<0 or n==0:
+		return False
+
+	if n==1:
+		return True
+	# if n==2:
+	# 	return False
+			# your code goes here
+	n=int(n)
+	while n>1:
+		a=str(n)
+		sum=0
+		for i in a:
+			sum=sum+(int(i)**2)
+		n=int(sum)
+		if sum==1:
+			return True
+
+		elif sum in l:
+			return False
+		else:
+			l.append(sum)
+
+		
+	return True
+
+print(ishappynumber(2))
