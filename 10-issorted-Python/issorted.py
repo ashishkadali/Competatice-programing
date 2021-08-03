@@ -7,4 +7,16 @@
 
 def issorted(a):
 	# your code goes here
-	pass
+
+	b=sorted(a)
+	count=0
+
+	for i in range(len(a)):
+
+		if a[i]==b[i]:
+			count=count+1
+
+	if count==len(a):
+		return True
+	else:
+		return False
